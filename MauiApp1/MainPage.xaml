@@ -2,8 +2,107 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage">
+    <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
+        <!-- Define the Rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Imagen -->
+            <RowDefinition Height="Auto"/>
+            <!-- Conexión remota -->
+            <RowDefinition Height="Auto"/>
+            <!-- Usuario Label -->
+            <RowDefinition Height="Auto"/>
+            <!-- Usuario Entry -->
+            <RowDefinition Height="Auto"/>
+            <!-- Contraseña Label -->
+            <RowDefinition Height="Auto"/>
+            <!-- Contraseña Entry -->
+            <RowDefinition Height="Auto"/>
+            <!-- ¿Guardar contraseña? Label -->
+            <RowDefinition Height="Auto"/>
+            <!-- CheckBox -->
+            <RowDefinition Height="Auto"/>
+            <!-- Elige servidor: Label -->
+            <RowDefinition Height="Auto"/>
+            <!-- RadioButtons -->
+            <RowDefinition Height="*"/>
+            <!-- Espacio flexible -->
+            <RowDefinition Height="Auto"/>
+            <!-- Botón Acceder -->
+        </Grid.RowDefinitions>
 
-    <StackLayout Padding="20" Spacing="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Imagen -->
+        <Image
+            Source="tierra.png"
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            Grid.Row="0"
+            Grid.Column="0"
+        />
+
+        <!-- Etiqueta: Conexión remota -->
+        <Label Text="Conexión remota"
+               HorizontalOptions="Center"
+               FontSize="20"
+               Grid.Row="1"
+               Grid.Column="0"/>
+
+        <!-- Etiqueta: Usuario -->
+        <Label Text="Usuario"
+               Grid.Row="2"
+               Grid.Column="0"/>
+
+        <!-- Entrada: Usuario -->
+        <Entry Placeholder="Introduce usuario"
+               Grid.Row="3"
+               Grid.Column="0"/>
+
+        <!-- Etiqueta: Contraseña -->
+        <Label Text="Contraseña"
+               Grid.Row="4"
+               Grid.Column="0"/>
+
+        <!-- Entrada: Contraseña -->
+        <Entry Placeholder="*******"
+               IsPassword="True"
+               Grid.Row="5"
+               Grid.Column="0"/>
+
+        <!-- Etiqueta: ¿Guardar contraseña? -->
+        <Label Text="¿Guardar contraseña?"
+               Grid.Row="6"
+               Grid.Column="0"/>
+
+        <!-- CheckBox: Guardar contraseña -->
+        <CheckBox HorizontalOptions="Center"
+                  Grid.Row="7"
+                  Grid.Column="0"/>
+
+        <!-- Etiqueta: Elige servidor -->
+        <Label Text="Elige servidor:"
+               Grid.Row="8"
+               Grid.Column="0"/>
+
+        <!-- Grupo de RadioButtons para los servidores -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                     Grid.Row="9" Grid.Column="0">
+            <RadioButton Content="Madrid"/>
+            <RadioButton Content="Barcelona"/>
+            <RadioButton Content="Valencia"/>
+        </StackLayout>
+
+        <!-- Botón: Acceder -->
+        <Button Text="Acceder"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Grid.Row="11"
+                Grid.Column="0"/>
+    </Grid>
+    <!--<StackLayout Padding="20" Spacing="10">
         <Image
             Source="tierra.png"
             HeightRequest="200"
@@ -28,6 +127,6 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>
 
-    </StackLayout>
+    </StackLayout>-->
 
 </ContentPage>
